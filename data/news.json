@@ -2,29 +2,1013 @@
   "category": "News",
   "categorySlug": "news",
   "leaderboardUrl": "https://substack.com/leaderboard/news",
-  "generatedAt": null,
-  "source": "sample",
-  "count": 15,
+  "generatedAt": "2026-06-10T14:10:57.225Z",
+  "source": "live",
+  "count": 100,
   "notes": {
     "paidSubscribers": "Estimated lower bound from the Substack Bestseller badge tier (100+ / 1,000+ / 10,000+). Substack does not publish exact paid counts.",
-    "freeSubscribers": "Approximate free/total subscriber count reported by Substack.",
-    "disclaimer": "SAMPLE / placeholder rows. Run `npm run fetch` to replace with live data."
+    "freeSubscribers": "Approximate free/total subscriber count reported by Substack."
   },
   "publications": [
-    { "rank": 1, "author": "Bari Weiss", "publicationName": "The Free Press", "url": "https://www.thefp.com", "freeSubscribers": 1400000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
-    { "rank": 2, "author": "Matt Taibbi", "publicationName": "Racket News", "url": "https://www.racket.news", "freeSubscribers": 680000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
-    { "rank": 3, "author": "Mehdi Hasan", "publicationName": "Zeteo", "url": "https://zeteo.com", "freeSubscribers": 540000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
-    { "rank": 4, "author": "Isaac Saul", "publicationName": "Tangle", "url": "https://www.readtangle.com", "freeSubscribers": 350000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
-    { "rank": 5, "author": "Oliver Darcy", "publicationName": "Status", "url": "https://www.statusnews.com", "freeSubscribers": 160000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
-    { "rank": 6, "author": "Emily Atkin", "publicationName": "HEATED", "url": "https://heated.world", "freeSubscribers": 110000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
-    { "rank": 7, "author": "Ken Klippenstein", "publicationName": "Ken Klippenstein", "url": "https://www.kenklippenstein.com", "freeSubscribers": 250000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
-    { "rank": 8, "author": "Marisa Kabas", "publicationName": "The Handbasket", "url": "https://www.thehandbasket.co", "freeSubscribers": 130000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
-    { "rank": 9, "author": "Judd Legum", "publicationName": "Popular Information", "url": "https://popular.info", "freeSubscribers": 360000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
-    { "rank": 10, "author": "Wesley Lowery", "publicationName": "Above the Fold", "url": "https://wesleylowery.substack.com", "freeSubscribers": 64000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
-    { "rank": 11, "author": "James Fallows", "publicationName": "Breaking the News", "url": "https://fallows.substack.com", "freeSubscribers": 120000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
-    { "rank": 12, "author": "Parker Molloy", "publicationName": "The Present Age", "url": "https://www.readtpa.com", "freeSubscribers": 88000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
-    { "rank": 13, "author": "Radley Balko", "publicationName": "The Watch", "url": "https://radleybalko.substack.com", "freeSubscribers": 72000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
-    { "rank": 14, "author": "Jonathan M. Katz", "publicationName": "The Racket", "url": "https://www.theracket.news", "freeSubscribers": 69000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
-    { "rank": 15, "author": "Kyle Tharp", "publicationName": "Chaotic Era", "url": "https://www.chaoticera.news", "freeSubscribers": 45000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 }
+    {
+      "rank": 1,
+      "author": "Aaron Parnas",
+      "publicationName": "The Parnas Perspective",
+      "url": "https://aaronparnas.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 2,
+      "author": "State of the Day",
+      "publicationName": "State of the Day",
+      "url": "https://stateoftheday.us",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 3,
+      "author": "J.C. Bruce",
+      "publicationName": "Tropic Press: J.C. Bruce",
+      "url": "https://www.jcbruce.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 4,
+      "author": "Andrew Tate",
+      "publicationName": "Andrew Tate",
+      "url": "https://substack.cobratate.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 5,
+      "author": "Jim Acosta",
+      "publicationName": "The Jim Acosta Show",
+      "url": "https://jimacosta.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 6,
+      "author": "Shaun King",
+      "publicationName": "The North Star with Shaun King",
+      "url": "https://www.thenorthstar.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 7,
+      "author": "American Media",
+      "publicationName": "The Newsroom",
+      "url": "https://www.newsroomtake.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 8,
+      "author": "Steve Cortes",
+      "publicationName": "Cortes Investigates",
+      "url": "https://stevecortes.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 9,
+      "author": "Daily Headlines",
+      "publicationName": "Daily Headlines",
+      "url": "https://dailyheadlines.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 10,
+      "author": "Scott Dworkin",
+      "publicationName": "The Dworkin Report",
+      "url": "https://www.dworkinsubstack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 11,
+      "author": "RocaNews",
+      "publicationName": "RocaNews",
+      "url": "https://rocanews.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 12,
+      "author": "The New Statesman",
+      "publicationName": "The Saturday Read",
+      "url": "https://saturdayread.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 13,
+      "author": "Defiant L’s",
+      "publicationName": "Defiant L's",
+      "url": "https://defiantls.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 14,
+      "author": "Katie Couric Media",
+      "publicationName": "Katie Couric",
+      "url": "https://katiecouric.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 15,
+      "author": "Candice Malcolm",
+      "publicationName": "Juno News",
+      "url": "https://www.junonews.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 16,
+      "author": "Lisa Remillard",
+      "publicationName": "FactsHQ",
+      "url": "https://lisaremillard.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 17,
+      "author": "Seymour Hersh",
+      "publicationName": "Seymour Hersh",
+      "url": "https://seymourhersh.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 18,
+      "author": "Michael Shellenberger",
+      "publicationName": "Public",
+      "url": "https://www.public.news",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 19,
+      "author": "Democratic Wins Media",
+      "publicationName": "Democratic Wins Media",
+      "url": "https://demwinsmedia.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 20,
+      "author": "Andrew Weissmann",
+      "publicationName": "Behind The Headlines",
+      "url": "https://weissmann.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 21,
+      "author": "Bill Bishop",
+      "publicationName": "Sinocism",
+      "url": "https://sinocism.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 22,
+      "author": "Steve Vladeck",
+      "publicationName": "One First",
+      "url": "https://www.stevevladeck.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 23,
+      "author": "Really American",
+      "publicationName": "Really American",
+      "url": "https://reallyamerican.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 24,
+      "author": "Angus Hervey",
+      "publicationName": "Fix The News",
+      "url": "https://fixthenews.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 25,
+      "author": "Rene Lankenau",
+      "publicationName": "Whitepaper.mx",
+      "url": "https://www.whitepaper.mx",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 26,
+      "author": "Central Jersey Newswire",
+      "publicationName": "Central Jersey Newswire",
+      "url": "https://www.centraljerseywire.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 27,
+      "author": "The Economist",
+      "publicationName": "The Economist: Off the Charts",
+      "url": "https://theeconomistoffthecharts.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 28,
+      "author": "Katie Phang",
+      "publicationName": "Katie Phang",
+      "url": "https://katiephang.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 29,
+      "author": "Terry Moran",
+      "publicationName": "Real Patriotism with Terry Moran",
+      "url": "https://terrymoran.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 30,
+      "author": "Glenn Kirschner",
+      "publicationName": "Glenn Kirschner",
+      "url": "https://glennkirschner.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 31,
+      "author": "Dave Pell",
+      "publicationName": "NextDraft",
+      "url": "https://managingeditor.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 32,
+      "author": "New York Magazine",
+      "publicationName": "New York Magazine",
+      "url": "https://nymag.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 33,
+      "author": "AlterNet America",
+      "publicationName": "Alternet America",
+      "url": "https://www.alternetamerica.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 34,
+      "author": "Peggy Hall",
+      "publicationName": "The Healthy American, Peggy Hall",
+      "url": "https://peggyhall.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 35,
+      "author": "Save Austin Now",
+      "publicationName": "Save Austin Now substack",
+      "url": "https://saveaustinnow.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 36,
+      "author": "Erick-Woods Erickson",
+      "publicationName": "Erick Erickson's Show Notes",
+      "url": "https://ewerickson.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 37,
+      "author": "Caitlin Johnstone",
+      "publicationName": "Caitlin’s Newsletter",
+      "url": "https://www.caitlinjohnst.one",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 38,
+      "author": "Julie k Brown",
+      "publicationName": "The Epstein Files by Julie K. Brown",
+      "url": "https://jkbjournalist.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 39,
+      "author": "WorldTempus Family",
+      "publicationName": "WorldTempus",
+      "url": "https://worldtempus.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 40,
+      "author": "MicroMega",
+      "publicationName": "La newsletter di MicroMega ",
+      "url": "https://micromega.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 41,
+      "author": "Mo News",
+      "publicationName": "Mo News",
+      "url": "https://read.mo.news",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 42,
+      "author": "Jim Waterson",
+      "publicationName": "London Centric",
+      "url": "https://www.londoncentric.media",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 43,
+      "author": "NewsGuard",
+      "publicationName": "NewsGuard's Reality Check",
+      "url": "https://www.newsguardrealitycheck.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 44,
+      "author": "Tom Sykes",
+      "publicationName": "The Royalist",
+      "url": "https://www.theroyalist.thedailybeast.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 45,
+      "author": "Whitexican",
+      "publicationName": "El Taims",
+      "url": "https://newsletter.eltaims.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 46,
+      "author": "John Ellis",
+      "publicationName": "News Items",
+      "url": "https://substack.news-items.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 47,
+      "author": "Michael East",
+      "publicationName": "Front Page Detectives",
+      "url": "https://frontpagedetectivesonline.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 48,
+      "author": "CT Capitol Dispatch",
+      "publicationName": "CT Capitol Dispatch",
+      "url": "https://capitoldispatch.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 49,
+      "author": "Philip DeFranco",
+      "publicationName": "DeFranco Daily",
+      "url": "https://www.philipdefranco.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 50,
+      "author": "Sam Cooper",
+      "publicationName": "The Bureau",
+      "url": "https://www.thebureau.news",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 51,
+      "author": "All Rise News",
+      "publicationName": "All Rise News",
+      "url": "https://www.allrisenews.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 52,
+      "author": "The Black Wall Street Times",
+      "publicationName": "The Black Wall Street Times",
+      "url": "https://thebwstimes.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 53,
+      "author": "A Better Contract",
+      "publicationName": "A BETTER CONTRACT (ABC-UFT)",
+      "url": "https://abettercontract.org",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 54,
+      "author": "Innovation Green World",
+      "publicationName": "Innovation Green World",
+      "url": "https://innovationgreenworld.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 55,
+      "author": "Rekto News",
+      "publicationName": "Rekto News",
+      "url": "https://rekto.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 56,
+      "author": "Venture Daily Digest",
+      "publicationName": "Venture Daily Digest",
+      "url": "https://www.venturedailydigest.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 57,
+      "author": "Michael T. Flynn LTG USA (RET)",
+      "publicationName": "General Flynn's Substack - Official",
+      "url": "https://genflynn.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 58,
+      "author": "Dave Bondy",
+      "publicationName": "Dave Bondy's Keeping it Real Newsletter",
+      "url": "https://www.davebondynews.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 59,
+      "author": "Phil Lewis",
+      "publicationName": "What I'm Reading",
+      "url": "https://www.whatimreading.net",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 60,
+      "author": "Emerald Robinson",
+      "publicationName": "Emerald Robinson: The Right Way",
+      "url": "https://www.emerald.tv",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 61,
+      "author": "Victoire Tuaillon",
+      "publicationName": "Renverser la table",
+      "url": "https://victoiretuaillon.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 62,
+      "author": "Matthieu",
+      "publicationName": "La Newsletter de CrowdBunker",
+      "url": "https://crowdbunker.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 63,
+      "author": "Sukumar Ranganathan",
+      "publicationName": "What's On My Mind",
+      "url": "https://hted.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 64,
+      "author": "Chris Cillizza",
+      "publicationName": "So What",
+      "url": "https://chriscillizza.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 65,
+      "author": "Lewis Goodall",
+      "publicationName": "Goodall and Good Luck",
+      "url": "https://goodallandgoodluck.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 66,
+      "author": "Zev Shalev",
+      "publicationName": "Narativ with Zev Shalev ",
+      "url": "https://www.narativ.org",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 67,
+      "author": "RealAmericasVoice",
+      "publicationName": "Real America's Voice",
+      "url": "https://realamericasvoice.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 68,
+      "author": "Byline Times",
+      "publicationName": "Byline Times",
+      "url": "https://www.bylinesupplement.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 69,
+      "author": "Stefano Feltri",
+      "publicationName": "Appunti - di Stefano Feltri ",
+      "url": "https://appunti.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 70,
+      "author": "Project Salt Box",
+      "publicationName": "Project Salt Box",
+      "url": "https://www.projectsaltbox.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 71,
+      "author": "Walter Hickey",
+      "publicationName": "Numlock News",
+      "url": "https://www.numlock.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 72,
+      "author": "Paulo Figueiredo",
+      "publicationName": "Paulo Figueiredo Show - Newsletter",
+      "url": "https://realpfigueiredo.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 73,
+      "author": "The Daily Beast",
+      "publicationName": "The Daily Beast",
+      "url": "https://thedailybeast.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 74,
+      "author": "Dan Wootton",
+      "publicationName": "Dan Wootton Outspoken",
+      "url": "https://www.danwoottonoutspoken.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 75,
+      "author": "Lawfare",
+      "publicationName": "Lawfare",
+      "url": "https://lawfare.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 76,
+      "author": "Richard Luthmann",
+      "publicationName": "This is For Real.",
+      "url": "https://luthmann.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 77,
+      "author": "Joshua Rozenberg",
+      "publicationName": "A Lawyer Writes",
+      "url": "https://rozenberg.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 78,
+      "author": "Climate Change and You",
+      "publicationName": "Climate Change and You",
+      "url": "https://climatemint.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 79,
+      "author": "SugarRhi~",
+      "publicationName": "SugarRhi~",
+      "url": "https://sugarrhi.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 80,
+      "author": "VICE News",
+      "publicationName": "VICE News",
+      "url": "https://www.vicenews.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 81,
+      "author": "Distill Social",
+      "publicationName": "Distill Social",
+      "url": "https://distillsocial.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 82,
+      "author": "Getting Better Foundation",
+      "publicationName": "Getting Better News",
+      "url": "https://newsletter.gettingbetterfoundation.org",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 83,
+      "author": "John Dickerson",
+      "publicationName": "John Dickerson",
+      "url": "https://www.johndickerson.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 84,
+      "author": "Sarah Westall",
+      "publicationName": "Business Game Changers with Sarah Westall",
+      "url": "https://sarahwestall.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 85,
+      "author": "Keeping Tabs",
+      "publicationName": "Keeping Tabs",
+      "url": "https://radaronline.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 86,
+      "author": "The Progress Network",
+      "publicationName": "The Progress Network",
+      "url": "https://theprogressnetwork.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 87,
+      "author": "Eddie Hernandez",
+      "publicationName": "Eddie’s List: San Francisco Bay Area Events, News This Week",
+      "url": "https://www.eddies-list.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 88,
+      "author": "Channel 4 News",
+      "publicationName": "Channel 4 News",
+      "url": "https://channel4news.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 89,
+      "author": "Former Lawman",
+      "publicationName": "Former Lawman",
+      "url": "https://formerlawman.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 90,
+      "author": "Josh Barro and Ken White",
+      "publicationName": "Serious Trouble",
+      "url": "https://www.serioustrouble.show",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 91,
+      "author": "Andy Ngo",
+      "publicationName": "Ngo Comment",
+      "url": "https://www.ngocomment.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 92,
+      "author": "Dominic Ponsford",
+      "publicationName": "Press Gazette",
+      "url": "https://pressgazette.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 93,
+      "author": "Eve Barlow",
+      "publicationName": "Blacklisted",
+      "url": "https://evebarlow.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 94,
+      "author": "The Robinson Report",
+      "publicationName": "The Robinson Report",
+      "url": "https://robinsonreport.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 95,
+      "author": "Michael Harriot",
+      "publicationName": "ContrabandCamp",
+      "url": "https://www.contrabandcamp.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 96,
+      "author": "Brian Lilley",
+      "publicationName": "Brian Lilley",
+      "url": "https://www.brianlilley.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 97,
+      "author": "International News",
+      "publicationName": "International News",
+      "url": "https://internanews.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 98,
+      "author": "Senator Babet",
+      "publicationName": "Let's Talk About It",
+      "url": "https://news.senatorbabet.com.au",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 99,
+      "author": "Will Media",
+      "publicationName": "The Talk",
+      "url": "https://thetalkwillmedia.substack.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    },
+    {
+      "rank": 100,
+      "author": "Keith Conrad",
+      "publicationName": "News Sidequest",
+      "url": "https://newssidequest.com",
+      "freeSubscribers": 0,
+      "bestsellerTier": 0,
+      "paidBadge": "—",
+      "paidEstimate": 0
+    }
   ]
 }
