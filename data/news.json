@@ -1,0 +1,30 @@
+{
+  "category": "News",
+  "categorySlug": "news",
+  "leaderboardUrl": "https://substack.com/leaderboard/news",
+  "generatedAt": null,
+  "source": "sample",
+  "count": 15,
+  "notes": {
+    "paidSubscribers": "Estimated lower bound from the Substack Bestseller badge tier (100+ / 1,000+ / 10,000+). Substack does not publish exact paid counts.",
+    "freeSubscribers": "Approximate free/total subscriber count reported by Substack.",
+    "disclaimer": "SAMPLE / placeholder rows. Run `npm run fetch` to replace with live data."
+  },
+  "publications": [
+    { "rank": 1, "author": "Bari Weiss", "publicationName": "The Free Press", "url": "https://www.thefp.com", "freeSubscribers": 1400000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 2, "author": "Matt Taibbi", "publicationName": "Racket News", "url": "https://www.racket.news", "freeSubscribers": 680000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 3, "author": "Mehdi Hasan", "publicationName": "Zeteo", "url": "https://zeteo.com", "freeSubscribers": 540000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 4, "author": "Isaac Saul", "publicationName": "Tangle", "url": "https://www.readtangle.com", "freeSubscribers": 350000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 5, "author": "Oliver Darcy", "publicationName": "Status", "url": "https://www.statusnews.com", "freeSubscribers": 160000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 6, "author": "Emily Atkin", "publicationName": "HEATED", "url": "https://heated.world", "freeSubscribers": 110000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
+    { "rank": 7, "author": "Ken Klippenstein", "publicationName": "Ken Klippenstein", "url": "https://www.kenklippenstein.com", "freeSubscribers": 250000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
+    { "rank": 8, "author": "Marisa Kabas", "publicationName": "The Handbasket", "url": "https://www.thehandbasket.co", "freeSubscribers": 130000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
+    { "rank": 9, "author": "Judd Legum", "publicationName": "Popular Information", "url": "https://popular.info", "freeSubscribers": 360000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 10, "author": "Wesley Lowery", "publicationName": "Above the Fold", "url": "https://wesleylowery.substack.com", "freeSubscribers": 64000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
+    { "rank": 11, "author": "James Fallows", "publicationName": "Breaking the News", "url": "https://fallows.substack.com", "freeSubscribers": 120000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
+    { "rank": 12, "author": "Parker Molloy", "publicationName": "The Present Age", "url": "https://www.readtpa.com", "freeSubscribers": 88000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
+    { "rank": 13, "author": "Radley Balko", "publicationName": "The Watch", "url": "https://radleybalko.substack.com", "freeSubscribers": 72000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
+    { "rank": 14, "author": "Jonathan M. Katz", "publicationName": "The Racket", "url": "https://www.theracket.news", "freeSubscribers": 69000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
+    { "rank": 15, "author": "Kyle Tharp", "publicationName": "Chaotic Era", "url": "https://www.chaoticera.news", "freeSubscribers": 45000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 }
+  ]
+}

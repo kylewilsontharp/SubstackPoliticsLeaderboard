@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Substack Leaderboard · Chaotic Era</title>
+    <meta
+      name="description"
+      content="A sortable leaderboard of the top 100 Substack publications in U.S. Politics and News — built by Chaotic Era."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="masthead-inner">
+        <a class="brand" href="https://chaoticera.news" target="_blank" rel="noopener">
+          <span class="brand-mark" aria-hidden="true">◣◥</span>
+          <span class="brand-name">Chaotic Era</span>
+        </a>
+        <a class="subscribe-btn" href="https://chaoticera.news/subscribe" target="_blank" rel="noopener">
+          Subscribe
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="kicker">The Chaotic Era Leaderboard</p>
+        <h1>Top 100 Substack Publications</h1>
+        <p class="dek">
+          The biggest newsletters on Substack in <strong>U.S. Politics</strong> and
+          <strong>News</strong>, ranked by their leaderboard standing. Click any column to sort.
+        </p>
+      </section>
+
+      <div class="controls">
+        <div class="tabs" role="tablist" aria-label="Category">
+          <button class="tab is-active" role="tab" data-category="us-politics">U.S. Politics</button>
+          <button class="tab" role="tab" data-category="news">News</button>
+        </div>
+        <div class="tools">
+          <input
+            id="search"
+            type="search"
+            class="search"
+            placeholder="Filter by author or publication…"
+            aria-label="Filter publications"
+          />
+          <span id="meta" class="meta"></span>
+        </div>
+      </div>
+
+      <div id="banner" class="banner" hidden></div>
+
+      <div class="table-wrap">
+        <table id="leaderboard">
+          <thead>
+            <tr>
+              <th class="num sortable" data-key="rank" aria-sort="ascending">#</th>
+              <th class="sortable" data-key="author">Author</th>
+              <th class="sortable" data-key="publicationName">Publication</th>
+              <th>URL</th>
+              <th class="num sortable" data-key="paidEstimate">
+                Paid Subs<span class="hint" title="Estimated lower bound from the Substack Bestseller badge tier. Substack does not publish exact paid counts.">ⓘ</span>
+              </th>
+              <th class="num sortable" data-key="freeSubscribers">
+                Free Subs<span class="hint" title="Approximate free/total subscriber count reported by Substack.">ⓘ</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <p id="empty" class="empty" hidden>No publications match your filter.</p>
+      </div>
+
+      <section class="methodology">
+        <h2>About this leaderboard</h2>
+        <ul>
+          <li>
+            <strong>Paid subscribers</strong> are an <em>estimate</em>. Substack does not publish
+            exact paid counts — the only public signal is the Bestseller badge tier, which maps to
+            <em>100+</em>, <em>1,000+</em>, or <em>10,000+</em> paid subscribers. Values shown are
+            lower bounds.
+          </li>
+          <li>
+            <strong>Free subscribers</strong> are the approximate free/total subscriber counts
+            reported by Substack's leaderboard API.
+          </li>
+          <li>
+            Rankings come from Substack's public category leaderboard
+            (<code>U.S. Politics</code> and <code>News</code>) and are refreshed periodically.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Built by <a href="https://chaoticera.news" target="_blank" rel="noopener">Chaotic Era</a> ·
+        Politics, media &amp; online influence by Kyle Tharp. Data via Substack's public leaderboard API.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

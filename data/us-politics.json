@@ -1,0 +1,30 @@
+{
+  "category": "U.S. Politics",
+  "categorySlug": "us-politics",
+  "leaderboardUrl": "https://substack.com/leaderboard/us-politics",
+  "generatedAt": null,
+  "source": "sample",
+  "count": 15,
+  "notes": {
+    "paidSubscribers": "Estimated lower bound from the Substack Bestseller badge tier (100+ / 1,000+ / 10,000+). Substack does not publish exact paid counts.",
+    "freeSubscribers": "Approximate free/total subscriber count reported by Substack.",
+    "disclaimer": "SAMPLE / placeholder rows. Run `npm run fetch` to replace with live data."
+  },
+  "publications": [
+    { "rank": 1, "author": "Heather Cox Richardson", "publicationName": "Letters from an American", "url": "https://heathercoxrichardson.substack.com", "freeSubscribers": 2100000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 2, "author": "The Bulwark", "publicationName": "The Bulwark", "url": "https://www.thebulwark.com", "freeSubscribers": 820000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 3, "author": "Robert B. Hubbell", "publicationName": "Today's Edition Newsletter", "url": "https://roberthubbell.substack.com", "freeSubscribers": 240000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 4, "author": "Joyce Vance", "publicationName": "Civil Discourse", "url": "https://joycevance.substack.com", "freeSubscribers": 410000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 5, "author": "Jessica Craven", "publicationName": "Chop Wood, Carry Water", "url": "https://chopwoodcarrywaterdailyactions.substack.com", "freeSubscribers": 150000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
+    { "rank": 6, "author": "Jay Kuo", "publicationName": "The Status Kuo", "url": "https://statuskuo.substack.com", "freeSubscribers": 320000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 7, "author": "Judd Legum", "publicationName": "Popular Information", "url": "https://popular.info", "freeSubscribers": 360000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 8, "author": "Robert Reich", "publicationName": "Robert Reich", "url": "https://robertreich.substack.com", "freeSubscribers": 1100000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 9, "author": "Marc Elias", "publicationName": "Democracy Docket", "url": "https://www.democracydocket.com", "freeSubscribers": 290000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 10, "author": "Lucian K. Truscott IV", "publicationName": "Lucian Truscott Newsletter", "url": "https://luciantruscott.substack.com", "freeSubscribers": 95000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
+    { "rank": 11, "author": "Steve Schmidt", "publicationName": "The Warning", "url": "https://steveschmidt.substack.com", "freeSubscribers": 180000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
+    { "rank": 12, "author": "Dan Rather", "publicationName": "Steady", "url": "https://steady.substack.com", "freeSubscribers": 520000, "bestsellerTier": 3, "paidBadge": "10,000+", "paidEstimate": 10000 },
+    { "rank": 13, "author": "Ruth Ben-Ghiat", "publicationName": "Lucid", "url": "https://lucid.substack.com", "freeSubscribers": 140000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
+    { "rank": 14, "author": "Greg Olear", "publicationName": "PREVAIL", "url": "https://gregolear.substack.com", "freeSubscribers": 78000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 },
+    { "rank": 15, "author": "Aaron Rupar", "publicationName": "Public Notice", "url": "https://www.publicnotice.co", "freeSubscribers": 130000, "bestsellerTier": 2, "paidBadge": "1,000+", "paidEstimate": 1000 }
+  ]
+}
