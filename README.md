@@ -9,34 +9,52 @@ The page shows, for each publication: **Author**, **Publication name**,
 Click any column header to sort; use the tabs to switch between U.S. Politics and
 News, and the search box to filter.
 
-## How it works
+## Project layout
 
 ```
-scripts/fetch-leaderboard.mjs   # pulls live rankings from Substack's public API → data/*.json
-data/us-politics.json           # top 100 U.S. Politics publications
-data/news.json                  # top 100 News publications
-index.html / styles.css / app.js  # static, sortable front-end (no build step)
-.github/workflows/refresh-data.yml  # daily refresh of the data files
+index.html / styles.css / app.js   # static, sortable front-end (no build step)
+scripts/fetch-leaderboard.mjs       # pulls rankings from Substack's API → data/*.json
+scripts/serve.mjs                   # tiny local preview server
+data/us-politics.json               # U.S. Politics publications
+data/news.json                      # News publications
 ```
 
 The front-end is plain static HTML/CSS/JS — it just reads the two JSON files,
-so it can be hosted anywhere (GitHub Pages, Netlify, Vercel, etc.).
+so it can be hosted anywhere (GitHub Pages, Netlify, Vercel, …).
 
-## Running it
+## Hosting it on GitHub Pages (free)
+
+This is a static site, so the easiest host is GitHub Pages:
+
+1. Go to **Settings → Pages** in this repo.
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**.
+3. Set **Branch** to `main` and the folder to `/ (root)`, then click **Save**.
+4. Wait ~1 minute. Your site appears at:
+   **https://kylewilsontharp.github.io/SubstackPoliticsLeaderboard/**
+
+That's it — every push to `main` re-publishes automatically.
+
+## Refreshing the data
+
+⚠️ **Substack blocks automated/datacenter requests.** Its API returns
+`403 Forbidden` to GitHub's servers and most cloud hosts, so the data **cannot**
+be refreshed from a CI job. It generally works from a normal home/office
+internet connection. To pull fresh numbers:
 
 ```bash
-# 1. Fetch live data (needs outbound access to substack.com)
-npm run fetch
-#   or a single category:  node scripts/fetch-leaderboard.mjs us-politics
-
-# 2. Preview locally
-npm run serve   # → http://localhost:8000
+# Run on your own computer (Node 18+), where Substack is reachable:
+npm run fetch          # updates data/us-politics.json and data/news.json
+git add data/ && git commit -m "Refresh leaderboard data" && git push
 ```
 
-> **Note:** The Claude Code web sandbox blocks outbound calls to `substack.com`,
-> so the repo ships with clearly-labelled **sample data** and a GitHub Action that
-> performs the real fetch on a daily schedule (or on-demand via *Run workflow*).
-> Until the fetch runs, the page shows a "sample data" banner.
+Then preview locally before/after:
+
+```bash
+npm run serve          # → http://localhost:8000
+```
+
+Until a successful fetch runs, the page shows **clearly-labelled sample data**
+(with a banner) so the layout and sorting are fully visible.
 
 ## Data sources & important caveats
 
@@ -57,8 +75,7 @@ Rankings come from Substack's **public, undocumented** category leaderboard API
   Values shown are **lower bounds**, presented as estimates — not exact figures.
 
 - **Free subscribers** are the **approximate** free/total subscriber counts
-  Substack itself reports on the leaderboard (the API field is literally a
-  "rough" number).
+  Substack itself reports on the leaderboard.
 
 ## Customizing the branding
 
@@ -70,5 +87,5 @@ hex values / logo from chaoticera.news to match pixel-for-pixel.
 
 Edit the `CATEGORIES` array in `scripts/fetch-leaderboard.mjs`. Category IDs are
 resolved by name at runtime from `/api/v1/categories`, so you only need the
-display name (e.g. `"World Politics"`), not a hard-coded numeric ID. Then add a
-matching tab in `index.html` and an entry in the `CATEGORIES` map in `app.js`.
+display name (e.g. `"World Politics"`). Then add a matching tab in `index.html`
+and an entry in the `CATEGORIES` map in `app.js`.
