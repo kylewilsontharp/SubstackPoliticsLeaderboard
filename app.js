@@ -95,7 +95,7 @@
           <td data-label="Publication" class="pub-name">${escapeHTML(p.publicationName)}</td>
           <td data-label="URL">${link}</td>
           <td class="num" data-label="Paid Subs">${paidBadgeHTML(p)}</td>
-          <td class="num" data-label="Free Subs">${fmtInt(p.freeSubscribers)}</td>
+          <td class="num" data-label="Total Subs">${fmtInt(p.freeSubscribers)}</td>
         </tr>`;
       })
       .join("");
