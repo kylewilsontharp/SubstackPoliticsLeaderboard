@@ -43,9 +43,23 @@ internet connection. To pull fresh numbers:
 
 ```bash
 # Run on your own computer (Node 18+), where Substack is reachable:
-npm run fetch          # updates data/us-politics.json and data/news.json
+npm run fetch          # top 100 per category -> data/us-politics.json, data/news.json
 git add data/ && git commit -m "Refresh leaderboard data" && git push
 ```
+
+By default it pulls the **top 100** per category. To pull more (Substack's
+category listing usually contains far more than 100), pass a limit — the fetch
+stops automatically when Substack reports no more results:
+
+```bash
+node scripts/fetch-leaderboard.mjs --limit 250          # both categories, top 250
+node scripts/fetch-leaderboard.mjs us-politics --limit 500
+node scripts/fetch-leaderboard.mjs --limit all          # everything Substack returns
+```
+
+> Going beyond ~100 means more API requests (higher chance of a temporary 403/
+> rate-limit) and increasingly "category directory" rather than "leaderboard"
+> ordering. If you raise the count, update the "Top 100" heading in `index.html`.
 
 Then preview locally before/after:
 

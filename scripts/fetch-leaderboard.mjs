@@ -35,7 +35,8 @@ const DATA_DIR = resolve(__dirname, "..", "data");
 
 const API_BASE = "https://substack.com/api/v1";
 const PAGE_SIZE = 25;
-const TARGET = 100; // top N publications per category
+const DEFAULT_LIMIT = 100; // top N per category; override with --limit N (or --limit all)
+const MAX_PAGES = 1000; // hard safety stop (~25k publications)
 // A real-browser User-Agent improves the odds Substack serves the request.
 // Substack blocks datacenter/cloud IPs outright, so run this from a normal
 // residential/office connection.
@@ -187,15 +188,16 @@ function normalizePublication(pub, fallbackRank) {
   };
 }
 
-async function fetchCategory({ slug, label, match }) {
-  process.stdout.write(`\n→ ${label} (${slug})\n`);
+async function fetchCategory({ slug, label, match }, limit = DEFAULT_LIMIT) {
+  const goal = Number.isFinite(limit) ? String(limit) : "all";
+  process.stdout.write(`\n→ ${label} (${slug}) — target: ${goal}\n`);
   const categoryId = await resolveCategoryId(match);
   process.stdout.write(`   category id: ${categoryId}\n`);
 
   const collected = [];
   const seen = new Set();
   let page = 0;
-  while (collected.length < TARGET) {
+  while (collected.length < limit && page < MAX_PAGES) {
     const url = `${API_BASE}/category/public/${categoryId}/all?page=${page}`;
     const data = await getJSON(url);
     const pubs = Array.isArray(data) ? data : data.publications || [];
@@ -206,11 +208,14 @@ async function fetchCategory({ slug, label, match }) {
       if (seen.has(key)) continue;
       seen.add(key);
       collected.push(norm);
-      if (collected.length >= TARGET) break;
+      if (collected.length >= limit) break;
     }
-    process.stdout.write(`   page ${page}: ${collected.length}/${TARGET}\n`);
+    process.stdout.write(`   page ${page}: ${collected.length}/${goal}\n`);
     const more = Array.isArray(data) ? pubs.length === PAGE_SIZE : data.more;
-    if (!more) break;
+    if (!more) {
+      process.stdout.write(`   (end of category reached)\n`);
+      break;
+    }
     page += 1;
   }
 
@@ -242,21 +247,39 @@ async function fetchCategory({ slug, label, match }) {
   process.stdout.write(`   ✓ wrote ${collected.length} publications -> data/${slug}.json\n`);
 }
 
+function parseArgs(argv) {
+  let limit = DEFAULT_LIMIT;
+  const slugs = [];
+  for (let i = 0; i < argv.length; i++) {
+    const a = argv[i];
+    const eq = a.startsWith("--limit=") ? a.slice(8) : null;
+    if (a === "--limit" || a === "-l") {
+      const v = argv[++i];
+      limit = /^all$/i.test(v) ? Infinity : Math.max(1, parseInt(v, 10) || DEFAULT_LIMIT);
+    } else if (eq !== null) {
+      limit = /^all$/i.test(eq) ? Infinity : Math.max(1, parseInt(eq, 10) || DEFAULT_LIMIT);
+    } else if (!a.startsWith("-")) {
+      slugs.push(a);
+    }
+  }
+  return { limit, slugs };
+}
+
 async function main() {
-  const requested = process.argv.slice(2);
-  const targets = requested.length
-    ? CATEGORIES.filter((c) => requested.includes(c.slug))
+  const { limit, slugs } = parseArgs(process.argv.slice(2));
+  const targets = slugs.length
+    ? CATEGORIES.filter((c) => slugs.includes(c.slug))
     : CATEGORIES;
 
   if (targets.length === 0) {
-    console.error(`No matching categories for: ${requested.join(", ")}`);
+    console.error(`No matching categories for: ${slugs.join(", ")}`);
     process.exit(1);
   }
 
   let failures = 0;
   for (const cat of targets) {
     try {
-      await fetchCategory(cat);
+      await fetchCategory(cat, limit);
     } catch (err) {
       failures += 1;
       console.error(`   ✗ ${cat.slug}: ${err.message}`);
@@ -273,4 +296,4 @@ if (import.meta.url === pathToFileURL(process.argv[1] || "").href) {
   });
 }
 
-export { normalizePublication, normalizeUrl, parseLooseInt, magnitudeLabel, badgeColorTier };
+export { normalizePublication, normalizeUrl, parseLooseInt, magnitudeLabel, badgeColorTier, parseArgs };
