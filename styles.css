@@ -5,20 +5,20 @@
    high-contrast politics-media aesthetic).
    ============================================================ */
 :root {
-  --ink: #111114;
-  --ink-soft: #3b3b42;
-  --paper: #f7f5f0;
+  --ink: #0d1117;          /* near-black text */
+  --ink-soft: #5b6675;     /* muted cool grey */
+  --paper: #fafcff;        /* Chaotic Era background */
   --paper-card: #ffffff;
-  --line: #e3ded3;
-  --line-strong: #c9c2b3;
-  --accent: #e0331f;      /* Chaotic Era red */
-  --accent-dark: #b32414;
-  --accent-soft: #fdecea;
-  --gold: #d9a441;        /* bestseller / paid tier highlight */
-  --purple: #6c4bd1;
-  --orange: #e07b27;
-  --shadow: 0 1px 2px rgba(17, 17, 20, 0.06), 0 8px 24px rgba(17, 17, 20, 0.06);
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --line: #e6edf6;
+  --line-strong: #cdd9e8;
+  --accent: #419eff;       /* Chaotic Era blue */
+  --accent-dark: #2486ec;  /* hover / links */
+  --accent-soft: #eaf4ff;
+  --gold: #d9a441;         /* sample-data banner */
+  --purple: #6c4bd1;       /* Bestseller tier 3 (mirrors Substack badge) */
+  --orange: #e07b27;       /* Bestseller tier 2 (mirrors Substack badge) */
+  --shadow: 0 1px 2px rgba(13, 17, 23, 0.05), 0 8px 24px rgba(65, 158, 255, 0.08);
+  --serif: "IBM Plex Serif", Georgia, "Times New Roman", serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
@@ -39,8 +39,8 @@ a { color: inherit; }
 
 /* ---------- Masthead ---------- */
 .masthead {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--paper-card);
+  color: var(--ink);
   border-bottom: 3px solid var(--accent);
 }
 .masthead-inner {
@@ -56,7 +56,7 @@ a { color: inherit; }
   align-items: baseline;
   gap: 10px;
   text-decoration: none;
-  color: var(--paper);
+  color: var(--ink);
 }
 .brand-mark {
   color: var(--accent);
@@ -65,7 +65,7 @@ a { color: inherit; }
 }
 .brand-name {
   font-family: var(--serif);
-  font-weight: 900;
+  font-weight: 700;
   font-size: 1.35rem;
   letter-spacing: 0.01em;
 }
@@ -100,7 +100,7 @@ main {
 }
 .hero h1 {
   font-family: var(--serif);
-  font-weight: 900;
+  font-weight: 700;
   font-size: clamp(2.1rem, 5vw, 3.4rem);
   line-height: 1.04;
   letter-spacing: -0.02em;
@@ -123,7 +123,7 @@ main {
   padding-top: 20px;
   margin-bottom: 18px;
 }
-.tabs { display: inline-flex; gap: 4px; background: #ece7dc; padding: 4px; border-radius: 999px; }
+.tabs { display: inline-flex; gap: 4px; background: var(--accent-soft); padding: 4px; border-radius: 999px; }
 .tab {
   border: 0;
   background: transparent;
@@ -137,7 +137,7 @@ main {
   transition: all 0.15s ease;
 }
 .tab:hover { color: var(--ink); }
-.tab.is-active { background: var(--ink); color: var(--paper); }
+.tab.is-active { background: var(--accent); color: #fff; }
 
 .tools { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .search {
@@ -181,7 +181,7 @@ thead th {
   color: var(--ink-soft);
   font-weight: 700;
   padding: 14px 16px;
-  background: #faf8f2;
+  background: #f1f7fe;
   border-bottom: 2px solid var(--line-strong);
   white-space: nowrap;
   position: sticky;
@@ -208,7 +208,7 @@ tbody td {
   vertical-align: middle;
 }
 tbody tr:last-child td { border-bottom: 0; }
-tbody tr:hover { background: #fbfaf6; }
+tbody tr:hover { background: #f4f9ff; }
 
 .rank { color: var(--ink-soft); font-weight: 700; }
 .rank-1, .rank-2, .rank-3 { color: var(--accent); }
@@ -229,7 +229,7 @@ tbody tr:hover { background: #fbfaf6; }
 }
 .badge-t3 { background: #efeaff; color: var(--purple); border-color: #d9ceff; }
 .badge-t2 { background: #fdeede; color: var(--orange); border-color: #f6d6ab; }
-.badge-t1 { background: #f0ece1; color: #7a6a3f; border-color: #ddd2b8; }
+.badge-t1 { background: #eef1f5; color: #5b6675; border-color: #d8dfe8; }
 .badge-t0 { color: var(--line-strong); }
 
 .empty { padding: 28px 16px; text-align: center; color: var(--ink-soft); }
@@ -250,7 +250,7 @@ tbody tr:hover { background: #fbfaf6; }
 .methodology ul { margin: 0; padding-left: 20px; color: var(--ink-soft); }
 .methodology li { margin-bottom: 8px; font-size: 0.92rem; }
 .methodology code {
-  background: #f0ece1;
+  background: var(--accent-soft);
   padding: 1px 6px;
   border-radius: 4px;
   font-size: 0.85em;
@@ -260,7 +260,7 @@ tbody tr:hover { background: #fbfaf6; }
 .site-footer {
   border-top: 1px solid var(--line);
   background: var(--ink);
-  color: #cfc9bd;
+  color: #aab4c0;
 }
 .site-footer p {
   max-width: 1120px;
