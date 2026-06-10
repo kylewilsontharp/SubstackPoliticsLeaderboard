@@ -235,6 +235,21 @@ tbody tr:hover { background: #f4f9ff; }
 .badge-t1 { background: #eef1f5; color: #5b6675; border-color: #d8dfe8; }
 .badge-t0 { color: var(--line-strong); }
 
+/* Partisan-lean pills */
+.lean {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.lean-left { background: #e7f0ff; color: #2563eb; border-color: #c7dbff; }
+.lean-right { background: #fdeaea; color: #dc2626; border-color: #f6cccc; }
+.lean-neutral { background: #eef1f5; color: #5b6675; border-color: #dbe2ea; }
+.lean-unrated { background: transparent; color: #9aa6b2; border-color: #e6ecf3; }
+
 .empty { padding: 28px 16px; text-align: center; color: var(--ink-soft); }
 
 /* ---------- Methodology ---------- */

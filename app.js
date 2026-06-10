@@ -8,9 +8,18 @@
     news: "data/news.json",
   };
 
+  // Subjective partisan-lean buckets (data/lean.json maps URL -> key).
+  const LEAN_META = {
+    left: { label: "Left", cls: "lean-left", full: "Left-leaning, Progressive, or Democrat" },
+    right: { label: "Right", cls: "lean-right", full: "Right-leaning, Conservative, or Republican" },
+    neutral: { label: "Neutral", cls: "lean-neutral", full: "Neutral or Nonpartisan" },
+    unrated: { label: "Unrated", cls: "lean-unrated", full: "Not yet classified — suggestions welcome" },
+  };
+
   const state = {
     category: "us-politics",
     data: {}, // slug -> parsed json
+    leans: null, // normalized url -> lean key
     sortKey: "rank",
     sortDir: 1, // 1 asc, -1 desc
     filter: "",
@@ -37,6 +46,20 @@
     const label = pub.paidBadge || "—";
     const detail = pub.paidDetail || "Estimated from Substack's Bestseller badge";
     return `<span class="badge badge-t${tier}" title="${escapeHTML(detail)}">${label}</span>`;
+  }
+
+  function leanHTML(pub) {
+    const meta = LEAN_META[pub.lean] || LEAN_META.unrated;
+    return `<span class="lean ${meta.cls}" title="${escapeHTML(meta.full)}">${meta.label}</span>`;
+  }
+
+  // Normalize a URL for matching against data/lean.json keys.
+  function leanKey(url) {
+    return String(url || "")
+      .toLowerCase()
+      .replace(/^https?:\/\//, "")
+      .replace(/^www\./, "")
+      .replace(/\/+$/, "");
   }
 
   function escapeHTML(s) {
@@ -76,7 +99,8 @@
     const list = currentList()
       .filter((p) => {
         if (!state.filter) return true;
-        const hay = `${p.author} ${p.publicationName}`.toLowerCase();
+        const leanLabel = (LEAN_META[p.lean] || {}).label || "";
+        const hay = `${p.author} ${p.publicationName} ${leanLabel}`.toLowerCase();
         return hay.includes(state.filter);
       })
       .slice()
@@ -93,6 +117,7 @@
           <td class="num" data-label="#"><span class="${rankClass}">${p.rank}</span></td>
           <td data-label="Author">${escapeHTML(p.author)}</td>
           <td data-label="Publication" class="pub-name">${escapeHTML(p.publicationName)}</td>
+          <td data-label="Lean">${leanHTML(p)}</td>
           <td data-label="URL">${link}</td>
           <td class="num" data-label="Paid Subs">${paidBadgeHTML(p)}</td>
           <td class="num" data-label="Total Subs">${fmtInt(p.freeSubscribers)}</td>
@@ -144,6 +169,29 @@
     render();
   }
 
+  async function loadLeans() {
+    if (state.leans) return;
+    state.leans = {};
+    try {
+      const res = await fetch("data/lean.json", { cache: "no-store" });
+      if (res.ok) {
+        const json = await res.json();
+        for (const [url, val] of Object.entries(json.leans || {})) {
+          state.leans[leanKey(url)] = val;
+        }
+      }
+    } catch {
+      /* no lean file -> everything shows as Unrated */
+    }
+  }
+
+  function enrichLeans(doc) {
+    if (!doc || !Array.isArray(doc.publications)) return;
+    doc.publications.forEach((p) => {
+      p.lean = (state.leans && state.leans[leanKey(p.url)]) || "unrated";
+    });
+  }
+
   async function loadCategory(slug) {
     if (state.data[slug]) return;
     try {
@@ -167,7 +215,8 @@
   async function selectCategory(slug) {
     state.category = slug;
     els.tabs.forEach((t) => t.classList.toggle("is-active", t.dataset.category === slug));
-    await loadCategory(slug);
+    await Promise.all([loadCategory(slug), loadLeans()]);
+    enrichLeans(state.data[slug]);
     render();
   }
 
