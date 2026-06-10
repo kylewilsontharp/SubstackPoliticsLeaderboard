@@ -35,7 +35,8 @@
   function paidBadgeHTML(pub) {
     const tier = pub.bestsellerTier || 0;
     const label = pub.paidBadge || "—";
-    return `<span class="badge badge-t${tier}" title="Estimated from Bestseller badge tier">${label}</span>`;
+    const detail = pub.paidDetail || "Estimated from Substack's Bestseller badge";
+    return `<span class="badge badge-t${tier}" title="${escapeHTML(detail)}">${label}</span>`;
   }
 
   function escapeHTML(s) {

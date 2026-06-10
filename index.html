@@ -67,7 +67,7 @@
               <th class="sortable" data-key="publicationName">Publication</th>
               <th>URL</th>
               <th class="num sortable" data-key="paidEstimate">
-                Paid Subs<span class="hint" title="Estimated lower bound from the Substack Bestseller badge tier. Substack does not publish exact paid counts.">ⓘ</span>
+                Paid Subs<span class="hint" title="Estimated order-of-magnitude from Substack's published ranking detail; pill colour follows the Bestseller badge. Substack does not publish exact paid counts.">ⓘ</span>
               </th>
               <th class="num sortable" data-key="freeSubscribers">
                 Free Subs<span class="hint" title="Approximate free/total subscriber count reported by Substack.">ⓘ</span>
@@ -84,13 +84,14 @@
         <ul>
           <li>
             <strong>Paid subscribers</strong> are an <em>estimate</em>. Substack does not publish
-            exact paid counts — the only public signal is the Bestseller badge tier, which maps to
-            <em>100+</em>, <em>1,000+</em>, or <em>10,000+</em> paid subscribers. Values shown are
-            lower bounds.
+            exact paid counts, so this shows the order-of-magnitude it publishes in each
+            publication's ranking detail (e.g. <em>"Hundreds of thousands of paid subscribers"</em> →
+            <em>100K+</em>). The pill colour follows the Bestseller badge tier (white&nbsp;100+,
+            orange&nbsp;1K+, purple&nbsp;10K+). Hover a pill for the full description.
           </li>
           <li>
-            <strong>Free subscribers</strong> are the approximate free/total subscriber counts
-            reported by Substack's leaderboard API.
+            <strong>Free subscribers</strong> is the rounded free/total subscriber count Substack
+            reports for each publication.
           </li>
           <li>
             Rankings come from Substack's public category leaderboard

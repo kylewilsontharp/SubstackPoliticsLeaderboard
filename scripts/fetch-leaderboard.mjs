@@ -28,7 +28,7 @@
 
 import { writeFile, mkdir } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = resolve(__dirname, "..", "data");
@@ -61,14 +61,29 @@ const CATEGORIES = [
   { slug: "news", label: "News", match: ["news"] },
 ];
 
-// Bestseller badge tier -> estimated paid subscribers (lower bound).
-// Source: https://support.substack.com/hc/en-us/articles/10661509585428
-const TIER_TO_PAID = {
-  0: { estimate: 0, label: "—" },
-  1: { estimate: 100, label: "100+" },
-  2: { estimate: 1000, label: "1,000+" },
-  3: { estimate: 10000, label: "10,000+" },
-};
+// Parse a loose integer like "2,900,000" or "Over 2,900,000 subscribers".
+function parseLooseInt(v) {
+  if (typeof v === "number") return Number.isFinite(v) ? v : 0;
+  if (typeof v !== "string") return 0;
+  const digits = v.replace(/[^\d]/g, "");
+  return digits ? parseInt(digits, 10) : 0;
+}
+
+// Short label for an order-of-magnitude estimate (100000 -> "100K+").
+function magnitudeLabel(n) {
+  if (!n || n < 1) return "—";
+  if (n >= 1_000_000) return `${+(n / 1_000_000).toFixed(1)}M+`;
+  if (n >= 1_000) return `${+(n / 1_000).toFixed(1)}K+`;
+  return `${n}+`;
+}
+
+// Substack Bestseller badge threshold (100 / 1,000 / 10,000) -> colour bucket.
+function badgeColorTier(n) {
+  if (n >= 10000) return 3;
+  if (n >= 1000) return 2;
+  if (n >= 100) return 1;
+  return 0;
+}
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -140,46 +155,35 @@ function normalizeUrl(pub) {
 }
 
 function normalizePublication(pub, fallbackRank) {
-  const tierRaw = Number(
-    pick(pub, ["bestsellerTier", "bestseller_tier", "leaderboardStatus.bestsellerTier"], 0)
+  // Bestseller badge threshold (100 / 1,000 / 10,000) drives the pill colour.
+  const badgeThreshold = parseLooseInt(
+    pick(pub, ["author_bestseller_tier", "author_badge.tier", "contributors.0.status.bestsellerTier"], 0)
   );
-  const tier = Number.isFinite(tierRaw) ? Math.max(0, Math.min(3, tierRaw)) : 0;
-  const paid = TIER_TO_PAID[tier] ?? TIER_TO_PAID[0];
+  const colorTier = badgeColorTier(badgeThreshold);
 
-  const free = Number(
-    pick(
-      pub,
-      [
-        "roughNumFreeSubscribers",
-        "rough_num_free_subscribers",
-        "subscriberCount",
-        "subscriber_count",
-        "followerCount",
-        "follower_count",
-      ],
-      0
-    )
+  // Paid-subscriber estimate: prefer Substack's published "ranking detail"
+  // order of magnitude (e.g. 100000 = "Hundreds of thousands of paid
+  // subscribers"); fall back to the Bestseller badge threshold.
+  const paidEstimate =
+    parseLooseInt(pick(pub, ["rankingDetailOrderOfMagnitude"], 0)) || badgeThreshold || 0;
+  const paidDetail = pick(pub, ["rankingDetail"], "");
+  const paidBadge = paidEstimate > 0 ? magnitudeLabel(paidEstimate) : "—";
+
+  // Free/total subscriber count (Substack reports a rounded figure).
+  const freeSubscribers = parseLooseInt(
+    pick(pub, ["freeSubscriberCount", "rankingDetailFreeSubscriberCount", "rough_num_free_subscribers"], 0)
   );
 
   return {
-    rank: Number(
-      pick(pub, ["rank", "leaderboardStatus.rank", "leaderboardStatus.ranking"], fallbackRank)
-    ),
-    author: pick(
-      pub,
-      ["authorName", "author_name", "author", "identityHandle", "name"],
-      "Unknown"
-    ),
-    publicationName: pick(
-      pub,
-      ["publicationName", "publication_name", "leaderboardStatus.publicationName", "name", "title"],
-      "Untitled"
-    ),
+    rank: parseLooseInt(pick(pub, ["rank", "leaderboardStatus.rank"], fallbackRank)) || fallbackRank,
+    author: pick(pub, ["author_name", "authorName", "primary_profile_name", "author"], "Unknown"),
+    publicationName: pick(pub, ["name", "publicationName", "publication_name", "title"], "Untitled"),
     url: normalizeUrl(pub),
-    freeSubscribers: Number.isFinite(free) ? free : 0,
-    bestsellerTier: tier,
-    paidBadge: paid.label,
-    paidEstimate: paid.estimate,
+    freeSubscribers,
+    bestsellerTier: colorTier,
+    paidBadge,
+    paidDetail,
+    paidEstimate,
   };
 }
 
@@ -224,9 +228,10 @@ async function fetchCategory({ slug, label, match }) {
     count: collected.length,
     notes: {
       paidSubscribers:
-        "Estimated lower bound from the Substack Bestseller badge tier " +
-        "(100+ / 1,000+ / 10,000+). Substack does not publish exact paid counts.",
-      freeSubscribers: "Approximate free/total subscriber count reported by Substack.",
+        "Estimated order-of-magnitude from Substack's published ranking detail " +
+        "(e.g. 'Hundreds of thousands of paid subscribers'); pill colour follows " +
+        "the Bestseller badge tier. Substack does not publish exact paid counts.",
+      freeSubscribers: "Rounded free/total subscriber count reported by Substack.",
     },
     publications: collected,
   };
@@ -260,7 +265,12 @@ async function main() {
   if (failures > 0) process.exit(1);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+// Only run when invoked directly (so the helpers can be imported by tests).
+if (import.meta.url === pathToFileURL(process.argv[1] || "").href) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+export { normalizePublication, normalizeUrl, parseLooseInt, magnitudeLabel, badgeColorTier };
