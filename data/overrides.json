@@ -3,6 +3,7 @@
   "overrides": {
     "https://www.thefp.com": { "totalSubscribers": 1500000, "estimated": true },
     "https://endlessurgency.com": { "totalSubscribers": 1100000, "estimated": true },
+    "https://substack.cobratate.com": { "totalSubscribers": 1000000, "estimated": true },
     "https://glennshow.com": { "displayUrl": "https://glennloury.substack.com" }
   }
 }
