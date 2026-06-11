@@ -140,9 +140,9 @@
     "https://substack.news-items.com": "neutral",
     "https://frontpagedetectivesonline.substack.com": "neutral",
     "https://capitoldispatch.substack.com": "neutral",
-    "https://www.philipdefranco.com": "neutral",
+    "https://www.philipdefranco.com": "left",
     "https://www.thebureau.news": "neutral",
-    "https://www.allrisenews.com": "neutral",
+    "https://www.allrisenews.com": "left",
     "https://thebwstimes.substack.com": "left",
     "https://abettercontract.org": "left",
     "https://genflynn.substack.com": "right",
@@ -336,6 +336,9 @@
     "https://amandasmildtakes.substack.com": "left",
     "https://theswamp.substack.com": "left",
     "https://newsletter.ofthebrave.org": "left",
-    "https://www.dailyfrontlines.com": "right"
+    "https://www.dailyfrontlines.com": "right",
+    "https://stateoftheday.us": "right",
+    "https://dailyheadlines.substack.com": "right",
+    "https://www.projectsaltbox.com": "left"
   }
 }
