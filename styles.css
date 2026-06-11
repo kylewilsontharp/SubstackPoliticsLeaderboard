@@ -168,6 +168,32 @@ main {
   transition: opacity 0.12s ease;
 }
 
+/* ---------- Marketing callout ---------- */
+.cta {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px 22px;
+  margin: 0 0 22px;
+  box-shadow: var(--shadow);
+}
+.cta p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.45;
+  font-weight: 500;
+}
+.cta a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+.cta a:hover {
+  text-decoration: none;
+}
+
 /* ---------- Controls ---------- */
 .controls {
   display: flex;
