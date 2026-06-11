@@ -115,6 +115,81 @@ main {
   margin: 0;
 }
 
+/* ---------- Bubble chart (experimental) ---------- */
+.chart-section {
+  margin: 8px 0 26px;
+}
+.chart-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 18px;
+  margin-bottom: 10px;
+}
+.chart-head h2 {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  margin: 0;
+}
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+.chart-legend .lg {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.chart-legend .dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.chart-legend .lg-note {
+  font-style: italic;
+}
+#bubble-chart {
+  position: relative;
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 8px;
+  overflow: hidden;
+}
+.bubbles-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.bub-label {
+  fill: #fff;
+  font-family: var(--sans);
+  font-weight: 600;
+  pointer-events: none;
+  paint-order: stroke;
+}
+.bubble-tip {
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  padding: 7px 10px;
+  border-radius: 8px;
+  max-width: 240px;
+  box-shadow: 0 6px 20px rgba(13, 17, 23, 0.25);
+  transition: opacity 0.12s ease;
+}
+
 /* ---------- Controls ---------- */
 .controls {
   display: flex;
