@@ -325,6 +325,11 @@ tbody tr:hover { background: #f4f9ff; }
   font-size: 0.84rem;
   color: var(--ink-soft);
 }
+.na {
+  color: var(--ink-soft);
+  font-variant-numeric: normal;
+  font-size: 0.82rem;
+}
 .est-mark {
   color: var(--accent);
   font-weight: 700;

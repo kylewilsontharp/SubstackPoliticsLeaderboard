@@ -38,8 +38,12 @@
 
   const NF = new Intl.NumberFormat("en-US");
 
-  function fmtInt(n) {
-    return Number.isFinite(n) && n > 0 ? NF.format(n) : "—";
+  function totalSubsHTML(p) {
+    if (!(p.freeSubscribers > 0)) return '<span class="na">Not Available</span>';
+    const mark = p.totalEstimated
+      ? '<span class="est-mark" title="Rough estimate — see notes at the bottom of the page">*</span>'
+      : "";
+    return NF.format(p.freeSubscribers) + mark;
   }
 
   function paidBadgeHTML(pub) {
@@ -121,7 +125,7 @@
           <td data-label="Lean">${leanHTML(p)}</td>
           <td data-label="URL">${link}</td>
           <td class="num" data-label="Paid Subs">${paidBadgeHTML(p)}</td>
-          <td class="num" data-label="Total Subs">${fmtInt(p.freeSubscribers)}${p.totalEstimated ? '<span class="est-mark" title="Rough estimate — see notes at the bottom of the page">*</span>' : ""}</td>
+          <td class="num" data-label="Total Subs">${totalSubsHTML(p)}</td>
         </tr>`;
       })
       .join("");
